@@ -7,6 +7,7 @@
 	background-position: center;
 	overflow: hidden;
 	position: relative;
+	z-index: 0;
 }
 .wanted-poster{
 	width: 200px;
@@ -20,6 +21,7 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	z-index: 1;
 }
 .wall-tack{
 	width: 20px;
@@ -31,4 +33,59 @@
 	left: 50%;
 	transform: translateX(-50%);
 	cursor: pointer;
+	z-index: 2;
+}
+.poster-stack{
+	width: 200 px;
+	height: 50px;
+	background-color: cyan;
+	border: 2px solid black;
+	text-align: center;
+	line-height: 50px;
+	cursor: pointer;
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	z-index: 1;
+}
+.overlay{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 62;
+}
+.create-form{
+	background-color: white;
+	width: 300px;
+	margin: 100px auto;
+	padding: 20px;
+	border: 1px solid black;
+	z-index: 63;
+}
+.outlaw-mug{
+	position: absolute;
+	top: 45px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100px;
+	height: 100px;
+}
+.bounty{
+	position: absolute;
+	bottom: 67px;
+	left: 10%;
+	transform: translateC(-50%);
+	font-weight: bold;
+}
+.name{
+	position: absolute;
+	top: 35px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 20px;
+	font-weifght: bold;
 }

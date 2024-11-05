@@ -11,6 +11,25 @@
 		<div class="wanted-poster" id="wantedPoster">
 			<div class="wall-tack" id="wallTack"></div>
 		</div>
+		<div class="poster-stack" id="posterStack">Create New Poster</div>
+		<div class="overlay" id="overlay">
+			<div class="create-poster">
+				<label for="outlaw">Show me who did it:</label>
+				<select id="outlaw">
+					<option value="pfp1.png">was it Sherlock Holmes?</option> <!-- https://www.rawpixel.com/image/6288746/vector-sticker-vintage-public-domain -->
+					<option value="pfp2.png">was it Count Dracula?</option> <!-- https://www.wannapik.com/vectors/34733 -->
+					<option value="pfp3.png">was it this bug here?</option> <!-- https://creazilla.com/media/clipart/9436/caterpillar-on-branch -->
+				</select><br><br>
+				<label for="infamy">And their name:</label>
+				<input type="text" id="infamy"><br><br>
+				
+				<label for="bountySum">Price on their head:</label>
+				<input type="text" id="bountySum"><br><br>
+				
+				<button id="cancelling">Never mind...</button>
+				<button id="posting">Post it!</button>
+			</div>
+		</div>
 	</div>
 	<script src="scripts.js"></script>
 </body>
