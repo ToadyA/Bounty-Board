@@ -9,6 +9,34 @@
 	position: relative;
 	z-index: 0;
 }
+
+@keyframes ripple{
+	0%{
+		transform: scale(0.5);
+		opacity: 0.5;
+	}
+	100%{
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+@keyframes slideDown{
+	100%{
+		transform: translateY(100%);
+		opacity: 0%;
+	}
+}
+@keyframes gunshotAnimation{
+	0%{
+		transform: scale(0);
+		opacity: 1;
+	}
+	100%{
+		transform: scale(1);
+		opacity: 0;
+	}
+}
+
 .wanted-poster{
 	width: 200px;
 	height: 250px;
@@ -21,6 +49,7 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	animation: none;
 	z-index: 1;
 }
 .wall-tack{
@@ -45,7 +74,7 @@
 	cursor: pointer;
 	position: absolute;
 	bottom: 20px;
-	left: 20px;
+	right: 20px;
 	z-index: 1;
 }
 .overlay{
@@ -55,7 +84,9 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	background-color: rgba(0, 0, 0, 0.6);
+	font-weight: bold;
 	z-index: 62;
 }
 .create-form{
@@ -77,9 +108,11 @@
 .bounty{
 	position: absolute;
 	bottom: 67px;
-	left: 10%;
-	transform: translateC(-50%);
+	left: 15%;
+	transform: translateX(-50%);
 	font-weight: bold;
+	text-align: left;
+	padding-left: 10px;
 }
 .name{
 	position: absolute;
@@ -87,5 +120,39 @@
 	left: 50%;
 	transform: translateX(-50%);
 	font-size: 20px;
-	font-weifght: bold;
+	font-weight: bold;
+	white-space: nowrap;
+}
+.star-rating{
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 28px;
+	font-weigfht: bold;
+	color: gold;
+	background-color: rgba(0, 0, 0, 0.01);
+}
+.gunshot{
+	position: absolute;
+	top: 50px;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	width: 20px;
+	height: 20px;
+	background: black;
+	border-radius: 50%;
+	opacity: 0;
+	animation: gunshotAnimation 0.5s forwards;
+}
+#moolah{
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+	font-size: 20px;
+	font-weight: bold;
+	color: gold;
+	background-color: rgba(0, 0, 0, 0.2);
+	padding: 10px;
+	border-radius: 5px;
 }

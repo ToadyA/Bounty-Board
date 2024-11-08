@@ -11,6 +11,7 @@
 		<div class="wanted-poster" id="wantedPoster">
 			<div class="wall-tack" id="wallTack"></div>
 		</div>
+		<div id="moolah">Money: $0</div>
 		<div class="poster-stack" id="posterStack">Create New Poster</div>
 		<div class="overlay" id="overlay">
 			<div class="create-poster">
@@ -24,13 +25,17 @@
 				<input type="text" id="infamy"><br><br>
 				
 				<label for="bountySum">Price on their head:</label>
-				<input type="text" id="bountySum"><br><br>
+				<input type="number" id="bountySum"><br><br>
+				
+				<label for="stars">Star Rating (1-5):</label>
+				<input type="number" id="stars" min="1" max="5"><br><br>
 				
 				<button id="cancelling">Never mind...</button>
 				<button id="posting">Post it!</button>
 			</div>
 		</div>
 	</div>
+	<audio id="gunSound" src="audio/gun.wav"></audio> <!-- https://freesound.org/people/Xenonn/sounds/128296/ -->
 	<script src="scripts.js"></script>
 </body>
 </html>
