@@ -50,6 +50,7 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	animation: none;
+	transition: left 0.05s, top 0.05s;
 	z-index: 1;
 }
 .wall-tack{
@@ -87,7 +88,7 @@
 	color: white;
 	background-color: rgba(0, 0, 0, 0.6);
 	font-weight: bold;
-	z-index: 62;
+	z-index: 1027;
 }
 .create-form{
 	background-color: white;
@@ -111,12 +112,16 @@
 	left: 15%;
 	transform: translateX(-50%);
 	font-weight: bold;
-	text-align: left;
+	text-align: center;
+	width: 100%;
+	justify-content: center;
 	padding-left: 10px;
+	align-items: center;
+	display: flex;
 }
 .name{
 	position: absolute;
-	top: 35px;
+	bottom: 38px;
 	left: 50%;
 	transform: translateX(-50%);
 	font-size: 20px;
@@ -125,25 +130,22 @@
 }
 .star-rating{
 	position: absolute;
-	bottom: 20px;
+	bottom: 10px;
 	left: 50%;
 	transform: translateX(-50%);
 	font-size: 28px;
-	font-weigfht: bold;
+	font-weight: bold;
 	color: gold;
 	background-color: rgba(0, 0, 0, 0.01);
 }
 .gunshot{
 	position: absolute;
-	top: 50px;
-	left: 50%;
+	top: 25px;
 	transform: translate(-50%, 50%);
-	width: 20px;
-	height: 20px;
-	background: black;
-	border-radius: 50%;
+	width: 160px;
+	height: auto;
 	opacity: 0;
-	animation: gunshotAnimation 0.5s forwards;
+	animation: gunshotAnimation 1s forwards;
 }
 #moolah{
 	position: absolute;
@@ -152,7 +154,23 @@
 	font-size: 20px;
 	font-weight: bold;
 	color: gold;
-	background-color: rgba(0, 0, 0, 0.2);
+	background-color: rgba(0, 0, 0, 0.1);
 	padding: 10px;
 	border-radius: 5px;
 }
+#moneyCounter{
+	font-size: 20px;
+	font-weight: bold;
+	color: white;
+	background:rgba(0, 0, 0, 0.1);
+	padding:10px;
+	border-radius: 5px;
+	display: inline-block;
+}
+#wantedPoster{
+	display: none;
+}
+#wallTack{
+	display: none;
+}
+
